@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E1935" />
+      <stop offset="100%" stop-color="#070D1D" />
+    </linearGradient>
+    <linearGradient id="octaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8CA2FF" />
+      <stop offset="100%" stop-color="#5575E7" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6FD39A" />
+      <stop offset="100%" stop-color="#3FA86E" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+
+  <!-- Outer Islamic 8-Pointed Star -->
+  <g transform="translate(256, 256)">
+    <!-- Square 1 -->
+    <rect x="-140" y="-140" width="280" height="280" rx="16" fill="#14244B" stroke="#8CA2FF" stroke-width="6" />
+    <!-- Square 2 (rotated 45deg) -->
+    <rect x="-140" y="-140" width="280" height="280" rx="16" fill="#14244B" stroke="#8CA2FF" stroke-width="6" transform="rotate(45)" />
+
+    <!-- Center Circle with Quranic Calligraphy Emblem -->
+    <circle r="72" fill="#0C1733" stroke="url(#octaGrad)" stroke-width="4" />
+    <circle r="54" fill="url(#goldGrad)" opacity="0.15" />
+
+    <!-- Stylized Arabic Letter 'ت' (تسميع) -->
+    <path d="M-28 -4 C-10 24 10 24 28 -4 C20 30 -20 30 -28 -4 Z" fill="#E7EBF8" />
+    <circle cx="-10" cy="-22" r="5" fill="#6FD39A" />
+    <circle cx="10" cy="-22" r="5" fill="#6FD39A" />
+  </g>
+</svg>

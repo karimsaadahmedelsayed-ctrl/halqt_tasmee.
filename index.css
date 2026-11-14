@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg: #070D1D;
+    --surface: #121A33;
+    --surface-2: #1A2444;
+    --ink: #E7EBF8;
+    --ink-2: #9AA7C9;
+    --line: #27325A;
+    --accent: #8CA2FF;
+    --accent-ink: #0A1230;
+    --accent-soft: #1D2A5C;
+    --gold: #F2C14E;
+    --gold-soft: #3A2F12;
+    --gold-ink: #F2C14E;
+    --err: #FF9A91;
+    --err-soft: #3C1D22;
+    --ok: #6FD39A;
+    color-scheme: dark;
+  }
+
+  body {
+    font-family: 'IBM Plex Sans Arabic', 'Segoe UI', Tahoma, sans-serif;
+  }
+}
+
+.mushaf-font {
+  font-family: 'Amiri Quran', serif;
+}
+
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(27, 122, 62, 0.7); }
+  70% { box-shadow: 0 0 0 8px rgba(27, 122, 62, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(27, 122, 62, 0); }
+}
+
+.speaking-border {
+  animation: pulse-ring 1.8s infinite;
+  border-color: var(--ok) !important;
+}

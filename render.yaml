@@ -1,0 +1,17 @@
+# Render free web service: whole app (page + API) on one URL.
+# Circles/messages/users are stored in Firestore, so nothing is lost when the free server sleeps/restarts.
+services:
+  - type: web
+    name: halqat-tasmee
+    runtime: node
+    plan: free
+    buildCommand: npm install --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: FIREBASE_SERVICE_ACCOUNT
+        sync: false   # paste the service-account JSON in the Render dashboard (never in code)
+      - key: FIRESTORE_DATABASE_ID
+        sync: false   # optional: only if your database is not "(default)"

@@ -1,0 +1,106 @@
+{
+  "id": "/",
+  "name": "حلقة تسميع",
+  "short_name": "حلقة تسميع",
+  "description": "حلقة تسميع: تطبيق لمراجعة وتثبيت القرآن الكريم عبر مكالمات مرئية تفاعلية وحلقات جماعية وغرف ثنائية معزولة.",
+  "theme_color": "#070D1D",
+  "background_color": "#070D1D",
+  "display": "standalone",
+  "display_override": [
+    "window-controls-overlay",
+    "standalone",
+    "minimal-ui"
+  ],
+  "orientation": "any",
+  "start_url": "/",
+  "scope": "/",
+  "dir": "rtl",
+  "lang": "ar",
+  "categories": [
+    "education",
+    "social",
+    "productivity"
+  ],
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "handle_links": "preferred",
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "icons": [
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "واجهة حلقات مراجعة القرآن والمكالمات المرئية المباشرة"
+    },
+    {
+      "src": "/screenshot-mobile.png",
+      "sizes": "720x1280",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "شاشة غرفة التسميع الثنائية ومطابقة التلاوة على الهاتف"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "أنشئ حلقة تسميع",
+      "short_name": "حلقة جديدة",
+      "description": "إنشاء حلقة تسميع جديدة ومشاركة الرابط",
+      "url": "/?action=create",
+      "icons": [
+        {
+          "src": "/pwa-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "المتابعة بحساب Google",
+      "short_name": "تسجيل الدخول",
+      "description": "تسجيل الدخول ومتابعة حلقات التسميع",
+      "url": "/?action=login",
+      "icons": [
+        {
+          "src": "/pwa-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "share_target": {
+    "action": "/",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
+}

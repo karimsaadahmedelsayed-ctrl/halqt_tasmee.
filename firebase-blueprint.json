@@ -1,0 +1,59 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile with Google Auth and group identity",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "name": { "type": "string", "maxLength": 100 },
+        "picture": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "email", "name"]
+    },
+    "Circle": {
+      "title": "Circle",
+      "description": "A Quran recitation circle with permanent members and chat",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string", "maxLength": 120 },
+        "creatorEmail": { "type": "string", "format": "email" },
+        "creatorName": { "type": "string" },
+        "members": { "type": "array" },
+        "createdAt": { "type": "number" }
+      },
+      "required": ["id", "name", "creatorEmail", "members"]
+    },
+    "Message": {
+      "title": "Message",
+      "description": "Chat message inside a recitation circle",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "circleId": { "type": "string" },
+        "senderName": { "type": "string" },
+        "senderEmail": { "type": "string", "format": "email" },
+        "text": { "type": "string", "maxLength": 2000 },
+        "timestamp": { "type": "number" }
+      },
+      "required": ["id", "circleId", "senderEmail", "text"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User profiles indexed by UID"
+    },
+    "/circles/{circleId}": {
+      "schema": "Circle",
+      "description": "Quran circles"
+    },
+    "/circles/{circleId}/messages/{messageId}": {
+      "schema": "Message",
+      "description": "Messages inside circle"
+    }
+  }
+}

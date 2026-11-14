@@ -1,0 +1,6 @@
+{
+  "name": "تسميع - حلقات مراجعة وتسميع القرآن",
+  "description": "منصة تسميع لمراجعة القرآن الكريم عبر مكالمات مرئية تفاعلية وحلقات جماعية مع مطابقة التلاوة الذكية وتسجيل الدخول بحساب Google.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
