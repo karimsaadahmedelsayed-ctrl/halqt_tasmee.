@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { UserSession, CircleRoom } from './types';
 import { GoogleLoginScreen } from './components/GoogleLoginScreen';
 import { CreateCircleScreen } from './components/CreateCircleScreen';
-import { GroupChatScreen } from './components/GroupChatScreen';
+//import { GroupChatScreen } from './components/GroupChatScreen';
 import { LiveRoomScreen } from './components/LiveRoomScreen';
-import { PairRoomScreen } from './components/PairRoomScreen';
+//import { PairRoomScreen } from './components/PairRoomScreen';
 import { ScreenErrorBoundary } from './components/ScreenErrorBoundary';
 import { logoutGoogle, checkRedirectResult } from './services/firebaseAuth';
 
